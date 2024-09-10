@@ -6,13 +6,16 @@ import javax.swing.JFrame;
 import co.edu.uptc.view.geographicalAnalysisFrame.PanelsAnalysis.PanelAnalysisBody;
 import co.edu.uptc.view.geographicalAnalysisFrame.PanelsAnalysis.PanelAnalysisFooter;
 import co.edu.uptc.view.geographicalAnalysisFrame.PanelsAnalysis.PanelAnalysisHeader;
+import co.edu.uptc.view.mainPanels.PanelMainBody;
 
 import java.awt.BorderLayout;
 
 public class MainPanelAnalysis extends JDialog{
 
+    public PanelMainBody panelMainBody;
     
-    public MainPanelAnalysis() {
+    public MainPanelAnalysis(PanelMainBody panelMainBody) {
+        this.panelMainBody = panelMainBody;
         initFrame();
         begin();
         createPanels();

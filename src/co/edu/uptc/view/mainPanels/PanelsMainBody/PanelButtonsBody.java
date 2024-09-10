@@ -22,6 +22,6 @@ public class PanelButtonsBody extends JPanel{
 
     private void createButtonAnalysis(){
         JButton buttonAnalysis = new JButton("Analysis");
-
+        
     }
 }
