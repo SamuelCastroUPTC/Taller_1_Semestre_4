@@ -1,8 +1,10 @@
 package co.edu.uptc.view;
 
+import co.edu.uptc.*;
+import co.edu.uptc.interfaces.Contract;
+
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
-import co.edu.uptc.interfaces.Contract;
 import co.edu.uptc.view.mainPanels.PanelMainBody;
 import co.edu.uptc.view.mainPanels.PanelMainFooter;
 import co.edu.uptc.view.mainPanels.PanelMainHeader;
