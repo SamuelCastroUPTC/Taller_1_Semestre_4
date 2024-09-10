@@ -1,10 +1,11 @@
 package co.edu.uptc.view;
 
 import javax.swing.JFrame;
-
+import java.awt.BorderLayout;
 import co.edu.uptc.interfaces.Contract;
 import co.edu.uptc.view.mainPanels.PanelMainBody;
 import co.edu.uptc.view.mainPanels.PanelMainFooter;
+import co.edu.uptc.view.mainPanels.PanelMainHeader;
 
 public class MainView extends JFrame implements Contract.View {
 
@@ -19,12 +20,13 @@ public class MainView extends JFrame implements Contract.View {
     public MainView() {
         initFrame();
         begin();
+        createPanels();
     }
 
     private void initFrame() {
         setTitle("Main View");
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setLayout(null);
+        this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -43,7 +45,7 @@ public class MainView extends JFrame implements Contract.View {
     }
 
     private void createFooter() {
-        PanelMainFooter panelMainFooter = new PanelMainFooter(this);
+        PanelMainFooter panelMainFooter = new PanelMainFooter();
         this.add(panelMainFooter, BorderLayout.SOUTH);
     }
 
