@@ -17,7 +17,7 @@ public class PanelMainFooter extends JPanel {
         this.setBackground(ConfigGlobalView.FOOTER_BACKGROUND_COLOR);
         this.setForeground(ConfigGlobalView.FOOTER_TEXT_COLOR);
         this.setLayout(null);
-        this.setPreferredSize(new Dimension(800, 200));
+        this.setPreferredSize(new Dimension(800, 100));
     }
 
     private void begin() {

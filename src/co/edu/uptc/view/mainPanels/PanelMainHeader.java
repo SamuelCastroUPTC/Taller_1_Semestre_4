@@ -17,7 +17,7 @@ public class PanelMainHeader extends JPanel {
         this.setBackground(ConfigGlobalView.HEADER_BACKGROUND_COLOR);
         this.setForeground(ConfigGlobalView.HEADER_TEXT_COLOR);
         this.setLayout(null);
-        this.setPreferredSize(new Dimension(800, 200));
+        this.setPreferredSize(new Dimension(800, 150));
     }
     
     private void begin() {

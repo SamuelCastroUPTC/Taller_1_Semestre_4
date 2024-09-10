@@ -34,6 +34,12 @@ public class MainView extends JFrame implements Contract.View {
         setVisible(true);
     }
 
+    private void createPanels() {
+        createHeader();
+        createBody();
+        createFooter();
+    }
+    
     private void createHeader() {
         PanelMainHeader panelMainHeader = new PanelMainHeader();
         this.add(panelMainHeader, BorderLayout.NORTH);
@@ -49,9 +55,4 @@ public class MainView extends JFrame implements Contract.View {
         this.add(panelMainFooter, BorderLayout.SOUTH);
     }
 
-    private void createPanels() {
-        createHeader();
-        createBody();
-        createFooter();
-    }
 }
