@@ -4,12 +4,15 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 
 import co.edu.uptc.globals.ConfigGlobalView;
+import co.edu.uptc.view.mainPanels.PanelsMainBody.PanelButtonsBody;
+import co.edu.uptc.view.mainPanels.PanelsMainBody.PanelImageBody;
 
 public class PanelMainBody extends JPanel {
 
     public PanelMainBody() {
         initPanel();
         begin();
+        createPanels();
     }
 
     public void initPanel() {
@@ -20,5 +23,20 @@ public class PanelMainBody extends JPanel {
 
     private void begin() {
         setVisible(true);
+    }
+
+    private void createPanels() {
+        createPanelImage();
+        createPanelButton();
+    }
+
+    private void createPanelImage(){
+        PanelImageBody panelImageBody = new PanelImageBody();
+        this.add(panelImageBody, BorderLayout.CENTER);
+    }
+
+    private void createPanelButton(){
+        PanelButtonsBody panelButtonsBody = new PanelButtonsBody();
+        this.add(panelButtonsBody, BorderLayout.SOUTH);
     }
 }
