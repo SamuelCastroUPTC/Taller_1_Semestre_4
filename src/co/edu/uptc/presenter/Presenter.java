@@ -8,13 +8,8 @@ public class Presenter implements Contract.Presenter {
 
     @SuppressWarnings("unused")
     private Contract.View view;
+    @SuppressWarnings("unused")
     private Contract.Model model;
-
-    public Presenter(Contract.View view, Contract.Model model) {
-        this.view = view;
-        this.model = model;
-        this.model.setPresenter(this);
-    }
 
     @Override
     public void setView(View view) {

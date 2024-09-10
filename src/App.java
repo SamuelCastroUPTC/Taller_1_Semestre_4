@@ -1,5 +1,8 @@
+import co.edu.uptc.view.MainView;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        MainView view = new MainView();
+        view.setVisible(true);
     }
 }
