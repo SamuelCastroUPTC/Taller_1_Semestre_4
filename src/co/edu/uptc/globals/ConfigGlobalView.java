@@ -1,4 +1,4 @@
-package co.edu.uptc.view;
+package co.edu.uptc.globals;
 
 import java.awt.Color;
 import java.awt.Font;
