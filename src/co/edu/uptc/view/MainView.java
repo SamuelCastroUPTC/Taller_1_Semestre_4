@@ -3,6 +3,8 @@ package co.edu.uptc.view;
 import javax.swing.JFrame;
 
 import co.edu.uptc.interfaces.Contract;
+import co.edu.uptc.view.mainPanels.PanelMainBody;
+import co.edu.uptc.view.mainPanels.PanelMainFooter;
 
 public class MainView extends JFrame implements Contract.View {
 
@@ -15,10 +17,39 @@ public class MainView extends JFrame implements Contract.View {
     }
 
     public MainView() {
-        this.setTitle("Main View");
-        this.setSize(800, 600);
+        initFrame();
+        begin();
+    }
+
+    private void initFrame() {
+        setTitle("Main View");
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setLayout(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        this.setVisible(true);
+    }
+
+    public void begin() {
+        setVisible(true);
+    }
+
+    private void createHeader() {
+        PanelMainHeader panelMainHeader = new PanelMainHeader();
+        this.add(panelMainHeader, BorderLayout.NORTH);
+    }
+
+    private void createBody() {
+        PanelMainBody panelMainBody = new PanelMainBody();
+        this.add(panelMainBody, BorderLayout.CENTER);
+    }
+
+    private void createFooter() {
+        PanelMainFooter panelMainFooter = new PanelMainFooter(this);
+        this.add(panelMainFooter, BorderLayout.SOUTH);
+    }
+
+    private void createPanels() {
+        createHeader();
+        createBody();
+        createFooter();
     }
 }
