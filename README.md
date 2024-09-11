@@ -1,5 +1,12 @@
 ## Electric Vehicle Population Data
 
+### Autores :
+ + Samuel Castro 
+ + Manuel Cruz 
+ 
+ ###
+ + Diseño GUI
+ + https://drive.google.com/file/d/1QWxfftnqsa-hgRJruwyg_Wb-vF3djJae/view
 ### Color
 #### Color base (fondo principal):
 - Azul Blaco: #DFF5FF
@@ -23,3 +30,6 @@
 ### Version de java necesaria
  + **Para ejecutar el proyecto es necesaria la version 21 de java**
 
+
+### Ejecutar
+ + Para ejecutar el proyecto ubiquese en la consola en la carpeta donde esta el .jar y ejecute el comando **java -jar .\Taller_1_Semestre_4.jar**
