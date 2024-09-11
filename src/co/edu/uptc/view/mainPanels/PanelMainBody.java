@@ -4,12 +4,16 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 
 import co.edu.uptc.globals.ConfigGlobalView;
+import co.edu.uptc.view.MainView;
 import co.edu.uptc.view.mainPanels.PanelsMainBody.PanelButtonsBody;
 import co.edu.uptc.view.mainPanels.PanelsMainBody.PanelImageBody;
 
 public class PanelMainBody extends JPanel {
 
-    public PanelMainBody() {
+    public MainView mainView;
+
+    public PanelMainBody(MainView mainView) {
+        this.mainView = mainView;
         initPanel();
         begin();
         createPanels();
@@ -22,7 +26,7 @@ public class PanelMainBody extends JPanel {
     }
 
     private void begin() {
-        setVisible(true);
+        this.setVisible(true);
     }
 
     private void createPanels() {
@@ -36,7 +40,7 @@ public class PanelMainBody extends JPanel {
     }
 
     private void createPanelButton(){
-        PanelButtonsBody panelButtonsBody = new PanelButtonsBody();
+        PanelButtonsBody panelButtonsBody = new PanelButtonsBody(this);
         this.add(panelButtonsBody, BorderLayout.SOUTH);
     }
 }

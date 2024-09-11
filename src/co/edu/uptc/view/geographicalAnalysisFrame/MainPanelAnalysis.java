@@ -1,34 +1,34 @@
 package co.edu.uptc.view.geographicalAnalysisFrame;
 
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 
 import co.edu.uptc.view.geographicalAnalysisFrame.PanelsAnalysis.PanelAnalysisBody;
 import co.edu.uptc.view.geographicalAnalysisFrame.PanelsAnalysis.PanelAnalysisFooter;
 import co.edu.uptc.view.geographicalAnalysisFrame.PanelsAnalysis.PanelAnalysisHeader;
-import co.edu.uptc.view.mainPanels.PanelMainBody;
+import co.edu.uptc.view.mainPanels.PanelsMainBody.PanelButtonsBody;
 
 import java.awt.BorderLayout;
 
 public class MainPanelAnalysis extends JDialog{
-
-    public PanelMainBody panelMainBody;
     
-    public MainPanelAnalysis(PanelMainBody panelMainBody) {
-        this.panelMainBody = panelMainBody;
+    public PanelButtonsBody panelButtonsBody;
+
+    public MainPanelAnalysis(PanelButtonsBody panelButtonsBody) {
+        super(panelButtonsBody.panelMainBody.mainView);
+        this.panelButtonsBody = panelButtonsBody;
         initFrame();
-        begin();
         createPanels();
     }
 
     private void initFrame() {
         setTitle("Electric Vehicle Population Data");
+        this.setSize(1200, 800);
+        this.setLocationRelativeTo(panelButtonsBody.panelMainBody.mainView);
         this.setLayout(new BorderLayout());
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public void begin() {
-        setVisible(true);
+        this.setVisible(true);
     }
 
     private void createPanels() {

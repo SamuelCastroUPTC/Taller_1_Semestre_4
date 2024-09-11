@@ -1,6 +1,5 @@
 package co.edu.uptc.view;
 
-import co.edu.uptc.*;
 import co.edu.uptc.interfaces.Contract;
 
 import javax.swing.JFrame;
@@ -48,7 +47,7 @@ public class MainView extends JFrame implements Contract.View {
     }
 
     private void createBody() {
-        PanelMainBody panelMainBody = new PanelMainBody();
+        PanelMainBody panelMainBody = new PanelMainBody(this);
         this.add(panelMainBody, BorderLayout.CENTER);
     }
 
