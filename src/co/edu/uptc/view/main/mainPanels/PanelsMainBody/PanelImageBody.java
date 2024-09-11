@@ -13,12 +13,7 @@ public class PanelImageBody extends JPanel {
     private Image image;
 
     public PanelImageBody() {
-        initPanel();
         loadImage();
-    }
-
-    private void initPanel() {
-        // Configuración inicial del panel si es necesario
     }
 
     private void loadImage() {
@@ -26,26 +21,36 @@ public class PanelImageBody extends JPanel {
         ImageIcon imageIcon = new ImageIcon(imagePath);
         image = imageIcon.getImage();
     }
-
+    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         if (image != null) {
-            int panelWidth = getWidth();
-            int panelHeight = getHeight();
-            double imageAspect = (double) image.getWidth(this) / image.getHeight(this);
-            double panelAspect = (double) panelWidth / panelHeight;
-            int newWidth, newHeight;
-            if (panelAspect > imageAspect) {
-                newHeight = panelHeight;
-                newWidth = (int) (panelHeight * imageAspect * 1.1); 
-            } else {
-                newWidth = panelWidth;
-                newHeight = (int) (panelWidth / imageAspect * 1.1); 
-            }
-            int x = (panelWidth - newWidth) / 2;
-            int y = (panelHeight - newHeight) / 2;
-            g.drawImage(image, x, y, newWidth, newHeight, this);
+            int[] dimensions = calculateImageDimensions();
+            drawCenteredImage(g, dimensions[0], dimensions[1]);
         }
     }
+
+    private int[] calculateImageDimensions() {
+        int panelWidth = getWidth();
+        int panelHeight = getHeight();
+        double imageAspect = (double) image.getWidth(this) / image.getHeight(this);
+        double panelAspect = (double) panelWidth / panelHeight;
+        int newWidth, newHeight;
+        if (panelAspect > imageAspect) {
+            newHeight = panelHeight;
+            newWidth = (int) (panelHeight * imageAspect * 1.1);
+        } else {
+            newWidth = panelWidth;
+            newHeight = (int) (panelWidth / imageAspect * 1.1);
+        }
+        return new int[]{newWidth, newHeight};
+    }
+
+    private void drawCenteredImage(Graphics g, int newWidth, int newHeight) {
+        int x = (getWidth() - newWidth) / 2;
+        int y = (getHeight() - newHeight) / 2;
+        g.drawImage(image, x, y, newWidth, newHeight, this);
+    }
+    
 }

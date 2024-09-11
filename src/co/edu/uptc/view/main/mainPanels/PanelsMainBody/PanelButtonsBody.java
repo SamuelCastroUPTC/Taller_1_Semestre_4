@@ -19,6 +19,7 @@ import co.edu.uptc.view.main.mainPanels.PanelMainBody;
 public class PanelButtonsBody extends JPanel{ 
 
     public PanelMainBody panelMainBody;
+    private GridBagConstraints gbc = new GridBagConstraints();
 
     public PanelButtonsBody(PanelMainBody panelMainBody) {
         this.panelMainBody = panelMainBody;
@@ -50,12 +51,7 @@ public class PanelButtonsBody extends JPanel{
         buttonGeographical.setBackground(ConfigGlobalView.BUTTON_BACKGROUND_COLOR);
         buttonGeographical.setFont(ConfigGlobalView.BUTTON_FONT);
         buttonGeographical.setPreferredSize(ConfigGlobalView.BUTTON_DIMENSION); 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0; 
-        gbc.gridy = 1;
-        gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.LINE_START; 
-        gbc.insets = new Insets(0, 20, 10, 0); 
+        createGridBagGeographical();
         buttonGeographical.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -66,17 +62,20 @@ public class PanelButtonsBody extends JPanel{
         this.add(buttonGeographical, gbc);
     }
 
+    private void createGridBagGeographical(){
+        gbc.gridx = 0; 
+        gbc.gridy = 1;
+        gbc.weightx = 0.5;
+        gbc.anchor = GridBagConstraints.LINE_START; 
+        gbc.insets = new Insets(0, 20, 10, 0); 
+    }
+
     private void createButtonVehicle() {
         JButton buttonVehicle = new JButton("<html>Análisis<br>de Vehículos</html>");
         buttonVehicle.setBackground(ConfigGlobalView.BUTTON_BACKGROUND_COLOR);
         buttonVehicle.setFont(ConfigGlobalView.BUTTON_FONT);
         buttonVehicle.setPreferredSize(ConfigGlobalView.BUTTON_DIMENSION); 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 1; 
-        gbc.gridy = 1;
-        gbc.weightx = 0.5;
-        gbc.anchor = GridBagConstraints.LINE_END; 
-        gbc.insets = new Insets(0, 0, 10, 20); 
+        createGridBagVehicle();
         buttonVehicle.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -84,6 +83,14 @@ public class PanelButtonsBody extends JPanel{
             }
         });
         this.add(buttonVehicle, gbc);
+    }
+
+    private void createGridBagVehicle(){
+        gbc.gridx = 1; 
+        gbc.gridy = 1;
+        gbc.weightx = 0.5;
+        gbc.anchor = GridBagConstraints.LINE_END; 
+        gbc.insets = new Insets(0, 0, 10, 20); 
     }
 
     private PanelButtonsBody getPanelButtonsBody() {

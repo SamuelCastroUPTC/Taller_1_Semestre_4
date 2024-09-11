@@ -36,7 +36,7 @@ public class PanelButtonsBodyA extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.weighty = 1.0;
-        gbc.insets = new Insets(10, 0, 10, 0);
+        gbc.insets = new Insets(10, 10, 10, 10);
         gbc.anchor = GridBagConstraints.NORTH;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         this.add(buttonStatus, gbc);
@@ -51,7 +51,7 @@ public class PanelButtonsBodyA extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 1;
         gbc.weighty = 1.0;
-        gbc.insets = new Insets(10, 0, 10, 0);
+        gbc.insets = new Insets(10, 10, 10, 10);
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         this.add(buttonCounty, gbc);
@@ -66,7 +66,7 @@ public class PanelButtonsBodyA extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 2;
         gbc.weighty = 1.0;
-        gbc.insets = new Insets(10, 0, 10, 0);
+        gbc.insets = new Insets(10, 10, 10, 10);
         gbc.anchor = GridBagConstraints.SOUTH;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         this.add(buttonVehicles, gbc);

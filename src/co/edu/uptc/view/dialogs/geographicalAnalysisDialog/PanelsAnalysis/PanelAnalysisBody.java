@@ -30,7 +30,7 @@ public class PanelAnalysisBody extends JPanel{
     private void createPanels() {
         createPanelButtons();
     }
-
+    
     private void createPanelButtons(){
         PanelButtonsBodyA panelButtonsBodyA = new PanelButtonsBodyA();
         this.add(panelButtonsBodyA, BorderLayout.WEST);

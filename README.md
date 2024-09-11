@@ -17,5 +17,9 @@
 - Para los titulos: SUSE   
 - Para los textos: Opens Sans
 
+### Version del proyecto 
+ + version 0.1.0
 
+### Version de java necesaria
+ + **Para ejecutar el proyecto es necesaria la version 21 de java**
 
